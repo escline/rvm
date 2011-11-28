@@ -151,11 +151,11 @@ install_head()
   else
     builtin cd "${rvm_src_path}"
 
-    if ! git clone --depth 1 git://github.com/wayneeseguin/rvm.git
+    if ! git clone --depth 1 https://github.com/wayneeseguin/rvm.git
     then
-      if !  git clone https://github.com/wayneeseguin/rvm.git
+      if !  git clone git://github.com/wayneeseguin/rvm.git
       then
-        fail "Unable to clone the RVM repository, attempted both git:// and https://"
+        fail "Unable to clone the RVM repository, attempted both https:// and git://"
       fi
     fi
   fi
